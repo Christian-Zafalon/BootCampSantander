@@ -1,0 +1,35 @@
+<div class="card w-100 my-5">
+    <div class="card-body">
+        <h1 class="card-title text-center">Formulario de Usuários</h1>
+        <form [formGroup]="userForm">
+            <div class="row my-4">
+                <div class="form-floating mb-3 w-50">
+                    <input type="text" class="form-control" formControlName="nome" id="nome"
+                        placeholder="Digite o seu nome" [(ngModel)]="nome">
+                    <label for="nome">&nbsp; Nome</label>
+                </div>
+                <div class="form-floating mb-3 w-50">
+                    <input type="text" class="form-control" formControlName="sobrenome" id="sobrenome"
+                        placeholder="Digite o seu sobrenome" [(ngModel)]="sobrenome">
+                    <label for="sobrenome">&nbsp; Sobrenome</label>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="form-floating mb-3 w-50">
+                    <input type="text" class="form-control" formControlName="idade" id="idade"
+                        placeholder="Digite a sua Idade">
+                    <label for="idade">&nbsp; Idade</label>
+                </div>
+                <div class="form-floating mb-3 w-50">
+                    <input type="text" class="form-control" formControlName="profissao" id="profissao"
+                        placeholder="Digite o seu profissao">
+                    <label for="profissao">&nbsp; Profissao</label>
+                </div>
+            </div>
+            <div class="form-group col-12 mt-4">
+                <button type="button" class="btn btn-outline-danger float-end" routerLink="/">Cancelar</button>
+                <button type="button" class="btn btn-outline-success float-start" (click)="actionButton()" href="/">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
